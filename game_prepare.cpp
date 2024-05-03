@@ -1,8 +1,9 @@
 #include "game_prepare.h"
-
+//TODO add doxygen comments style
+//TODO try autoformat tools
 bool getMaxValue(const int argc, const char** argv, int &maxValue)
 {
-
+	const std::string helpMessage = "Start program with --help parametr for more information";
 	// Let's print this argument
 	if (argc < 2)
    	{
@@ -10,22 +11,40 @@ bool getMaxValue(const int argc, const char** argv, int &maxValue)
 	}
 	else
 	{
-		if (argc >= 2)
-   		{
 
-			std::string arg1_value{ argv[1] };
-			if (arg1_value == "--parameter") {
-
-				// We've detected the '-parameter' argument. And we extect that after this argument there is a value:
-				int parameter_value = 0;
-				if (argc < 3) {
-					std::cout << "Wrong usage! The argument '--parameter' requires some value!" << std::endl;
+				std::string arg1_value{ argv[1] };
+				if (arg1_value == "--max_number") 
+				{
+					// We've detected the '-parameter' argument. And we extect that after this argument there is a value:
+					// We need to parse the string to the int value
+					if (argc < 3) 
+					{
+						std::cout << "Wrong arguments number! " << helpMessage << std::endl;
+						return 1;
+					}
+					else
+					{
+						maxValue = std::stoi(argv[2]);
+						if (maxValue < 0)
+						{
+							std::cout << "Number can't be negative" << std::endl;
+							return 1;
+						}
+					}
+				}
+				else if (arg1_value == "--help") 
+				{
+					std::cout<< "suported arguments:" << std::endl
+						<< "--help" << std::endl
+						<< "--max_number NUMBER" << std::endl;
 					return 1;
 				}
-				// We need to parse the string to the int value
-				parameter_value = std::stoi(argv[2]);
-			}
-		}
+				else
+				{
+					std::cout << "Wrong parametr name. "<< helpMessage << std::endl;
+					return 1;
+				}	
+							
 	}
 
 	std::cout << "Max value = " << maxValue << std::endl;
@@ -41,7 +60,7 @@ bool calcRandomNumber(const int maxValue, int &randomNumber)
 	else
 	{
 		std::srand(std::time(nullptr)); // use current time as seed for random generator
-		randomNumber = std::rand() % maxValue;
+		randomNumber = std::rand() % (maxValue+1);
 		return 0;
 	}
 }

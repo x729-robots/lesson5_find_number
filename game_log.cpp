@@ -29,7 +29,7 @@ bool printLog   (const std::string logFName)
 			return 1;
 		}
 
-		std::cout << "High scores table:" << std::endl;
+		std::cout << "Player results  table:" << std::endl;
 
 		std::string username;
 		int high_score = 0;
