@@ -20,4 +20,4 @@ set_target_properties(find_number PROPERTIES
     CXX_STANDARD_REQUIRED ON
 )
 
-
+set(CMAKE_BUILD_TYPE Debug)

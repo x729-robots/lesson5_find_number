@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 {
 
 	int maxValue(0);
-	if(readArgs(argc, const_cast<const char**>(argv), maxValue)){return 1;}
+	if(getMaxValue(argc, const_cast<const char**>(argv), maxValue)){return 1;}
 	
 	int randomNumber(0);
 	if(calcRandomNumber(maxValue, randomNumber)){return 1;}
