@@ -2,10 +2,8 @@ cmake_minimum_required(VERSION 3.28)
 
 project(find_number)
 
-add_executable
-(
+add_executable(find_number
 	find_number.cpp
-	find_number.h
 	game_prepare.cpp
 	game_prepare.h
 	game_ui.cpp
