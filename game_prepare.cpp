@@ -13,7 +13,7 @@ bool getMaxValue(const int argc, const char** argv, int &maxValue)
 	{
 
 				std::string arg1_value{ argv[1] };
-				if (arg1_value == "--max_number") 
+				if (arg1_value == "--max") 
 				{
 					// We've detected the '-parameter' argument. And we extect that after this argument there is a value:
 					// We need to parse the string to the int value
@@ -36,7 +36,13 @@ bool getMaxValue(const int argc, const char** argv, int &maxValue)
 				{
 					std::cout<< "suported arguments:" << std::endl
 						<< "--help" << std::endl
-						<< "--max_number NUMBER" << std::endl;
+						<< "--max NUMBER" << std::endl
+						<< "--table" << std::endl;
+					return 1;
+				}
+				else if(arg1_value == "--table")
+				{				
+					printLog ();
 					return 1;
 				}
 				else

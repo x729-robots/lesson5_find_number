@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "game_log.h"
 
 const int defMaxValue = 10;
 

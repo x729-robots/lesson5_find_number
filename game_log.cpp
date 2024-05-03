@@ -1,6 +1,6 @@
 #include "game_log.h"
 
-bool resultToLog(const std::string logFName,const std::string user, const int attemptsN)
+bool resultToLog(const std::string user, const int attemptsN)
 {
 	// Write new high score to the records table
 	{
@@ -21,7 +21,7 @@ bool resultToLog(const std::string logFName,const std::string user, const int at
 
 	return 0;
 }
-bool printLog   (const std::string logFName)
+bool printLog   ()
 {
 		std::ifstream in_file{logFName};
 		if (!in_file.is_open()) {

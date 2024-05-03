@@ -21,7 +21,7 @@ bool superGame(const int randomNumber, int &attemptsN)
 			MessageTooBig(current_value );
 		}
 		else {
-			MessageVictory();
+			MessageVictory(attemptsN);
 			break;
 		}
 

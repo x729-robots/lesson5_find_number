@@ -12,8 +12,8 @@ void MessageTooLittle(int current_value )
 	return;
 }
 
-void MessageVictory()
+void MessageVictory(int attemptsN)
 {
-	std::cout << "you win!" << std::endl;
+	std::cout << "you win! " << "attempts = "<< attemptsN << std::endl;
 	return;
 }
