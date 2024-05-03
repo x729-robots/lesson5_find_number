@@ -1,23 +1,25 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.28)
 
-project(03.homework)
+project(find_number)
 
-add_executable(
-	#	check_value
-	#	check_value.cpp
+add_executable
+(
+	find_number.cpp
+	find_number.h
+	game_prepare.cpp
+	game_prepare.h
+	game_ui.cpp
+	game_ui.h
+	game_logic.cpp
+	game_logic.h
+	game_log.cpp
+	game_log.h
 )
 
-add_executable(
-	#	random_value
-	#	random_value.cpp
+
+set_target_properties(find_number PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
 )
 
-add_executable(
-	#	high_scores
-	#	high_scores.cpp
-)
 
-add_executable(
-	#	argument
-	#	argument.cpp
-)

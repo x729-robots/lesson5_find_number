@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 	user = getUser();
 	
 	int attemptsN;
-	if(superGame(randomNumbe, int &attemptsN)){return 1};
+	if(superGame(randomNumber, int &attemptsN)){return 1};
 	
 	const std::string logFName("find_number.log");
 	if(resultToLog(logFName,user, attemptsN)){return 1;}
