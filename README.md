@@ -1,9 +1,8 @@
 # lesson5_find_number
 This is game. You should find random number from the range.
 
-#NOTE
+# NOTE
 	This project fully made in VIM with this commands (it was difficult...):
-	        настройка VIM в качестве IDE
 	        
 	            insert/i - режим вставки
 	            v - визуальный режим
